@@ -14,19 +14,19 @@ $(function () {
   ===================================================*/
   // カルーセル用 jQueryプラグイン「slick」の設定
   // マニュアル：https://kenwheeler.github.io/slick/
-  $("").slick({
+  $(".slider-div").slick({
     arrows: false,
     centerMode: true,
     centerPadding: "100px",
-    slidesToShow: ,
+    slidesToShow: 3,
     autoplay: true,
-    autoplaySpeed: ,
+    autoplaySpeed: 2500,
     responsive: [
       {
         breakpoint: 768,
         settings: {
           centerPadding: "50px",
-          slidesToShow: ,
+          slidesToShow: 1500,
         },
       },
     ],
