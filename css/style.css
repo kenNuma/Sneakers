@@ -52,6 +52,11 @@ header {
   height: 2px;
   position: absolute;
   border-radius: 15%;
+  transition: 0.5s;
+}
+
+.open .hunberger span {
+  z-index: 15;
 }
 
 .hunberger span:nth-child(1) {
@@ -64,11 +69,80 @@ header {
   top: 78%;
 }
 
-.mask {
-  display: none;
+.open .hunberger span:nth-child(1) {
+  background-color: white;
+  transform: rotate(-135deg);
+  top: 50%;
+}
+.open .hunberger span:nth-child(2) {
+  background-color: transparent;
+}
+.open .hunberger span:nth-child(3) {
+  background-color: white;
+  transform: rotate(135deg);
+  top: 50%;
 }
 
+.mask {
+  display: none;
+  transition: all 0.5s;
+}
+.open .mask {
+  top: 0;
+  left: 0;
+  background-color: #333;
+  opacity: 0.8;
+  display: block;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  cursor: pointer;
+}
+
+nav {
+  opacity: 0;
+  left: -300px;
+  top: 0;
+  bottom: 0;
+  width: 300px;
+  padding: 60px 25px;
+  transition: 0.5s;
+  background-color: #333;
+  position: fixed;
+  z-index: 20;
+}
+
+.open nav {
+  left: 0;
+  opacity: 1;
+}
+
+nav a {
+  color: white;
+  font-size: 0.85rem;
+}
+
+.section-list li {
+  padding: 18px 0;
+  border-bottom: 1px solid white;
+}
+.section-list li:nth-child(1) {
+  border-top: 1px solid white;
+}
+
+.sns-list {
+  margin-top: 35px;
+}
+
+.sns-list li {
+  padding: 8px 0;
+}
+
+
 /* main ↓　*/
+main {
+  padding-top: 80px;
+}
 
 /* 共通 */
 .section-title {
@@ -162,6 +236,10 @@ header {
   width: 45%;
 }
 
+.contact-texts p {
+  margin-bottom: 30px;
+}
+
 .input-info input {
   background-color: white;
   width: 100%;
@@ -179,4 +257,36 @@ textarea {
   width: 200px;
   color: white;
   border: solid 1px white;
+}
+.send-submit:hover {
+  color: black;
+  background-color: white;
+}
+
+/* footer */
+footer {
+  padding: 10px;
+  background-color: black;
+  color: white;
+}
+
+footer p {
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+@media(max-width: 768px) {
+  .contact-contents {
+    display: grid;
+  }
+  .contact-texts {
+    width: 100%;
+  }
+  .contact-input {
+    width: 100%;
+  }
+
+  .send-submit {
+    width: 100%;
+  }
 }
