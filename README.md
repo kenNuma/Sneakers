@@ -5,4 +5,4 @@
 
 ## 使用技術
 - 言語：HTML/CSS,JavaScript
-- ライブラリ：jquery
+- ライブラリ：jquery, slick-carousel
